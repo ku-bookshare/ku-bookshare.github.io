@@ -102,13 +102,13 @@ class Borrow extends Component {
     render() {
         
         return(
-            <div style={{width: 500}}>
+            <div className="form-body">
                 <Link to="/" className="Link close">
                     <a href="./" class="close"/>
                 </Link>
-                <h1>
+                <h2>
                     Borrow a Book !
-                </h1>
+                </h2>
                 <form className="form" onSubmit={this.handleSubmit}>
                 <div className="form-line">
                     <label className="form-label"> Name :</label> 

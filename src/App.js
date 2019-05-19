@@ -5,13 +5,12 @@ import {
   Switch
 } from "react-router-dom";
 import Home from './Home';
-import About from './pages/Locations';
+import About from './pages/About';
 import Contact from './pages/Contact';
 import Borrow from './pages/Borrow';
 import Donate from './pages/Donate';
 import Books from './pages/Books';
 import Locations from './pages/Locations';
-import Reservation from './pages/Reservation';
 import Construction from './pages/Construction';
 import logo from './assets/logo.png';
 import title from './assets/bookshare.png';
@@ -85,7 +84,7 @@ class App extends Component {
             <img src={logoName} className="App-name" alt="logo" />
           </div>
           <div>
-            <img src={map} className="map" alt=""/>
+            <img src={map} className="map" alt="map"/>
           </div>
         </div>  
       </div>
@@ -96,6 +95,7 @@ class App extends Component {
             <Link to="/about" className="Menu-button" > About Us </Link>
             <Link to="/contact" className="Menu-button" > Contact </Link>
           </div>
+        <div className="right-body">
         <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
@@ -106,6 +106,7 @@ class App extends Component {
             <Route path="/locations" component={Locations} />
             <Route path="/construction" component={Construction} />
         </Switch>
+        </div>
       </header>
         <div className="cd-cover-layer"></div>
       </div>

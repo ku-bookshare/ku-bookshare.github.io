@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {
   Link,
+  Route,
 } from "react-router-dom";
 
 class Button extends Component {
@@ -10,23 +11,40 @@ class Button extends Component {
       name: this.props.name,
       image: this.props.image,
       to: this.props.to,
+      direct: this.props.direct,
     };
   }
   render() {
-    return ( 
-      <Link to={this.state.to} className="Link">
-        <div className="Button">
-                 
-          <div >
-            <img src={this.state.image} className="btn-image" alt=""/>
+    if(this.state.direct) {
+      return (
+      <a className="Link" target="_blank" href={this.state.direct}>
+      <div className="Button">
+            <div >
+              <img src={this.state.image} className="btn-image" alt=""/>
+            </div>
+            <div style={{marginLeft:10}}>
+              <h1>{this.state.name}</h1>
+            </div>
+            
           </div>
-          <div style={{marginLeft:10}}>
-            <h1>{this.state.name}</h1>
+      </a>
+      )
+    } else {
+      return ( 
+        <Link to={this.state.to} className="Link">
+          <div className="Button">
+                  
+            <div >
+              <img src={this.state.image} className="btn-image" alt=""/>
+            </div>
+            <div style={{marginLeft:10}}>
+              <h1>{this.state.name}</h1>
+            </div>
+            
           </div>
-          
-        </div>
-        </Link>
-    )
+          </Link>
+      )
+    }
   }
 }
 

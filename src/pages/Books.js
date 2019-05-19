@@ -112,40 +112,7 @@ class Borrow extends Component {
                 <h1>
                     Books 
                 </h1>
-                <form className="form" onSubmit={this.handleSubmit}>
-                <div className="form-line">
-                    <label className="form-label"> Name :</label> 
-                    <input className="form-input" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-                </div>  
-                <div className="form-line">
-                    <label className="form-label"> Surname :</label> 
-                    <input className="form-input" type="text" name="surname" value={this.state.surname} onChange={this.handleChange} />
-                </div>  
-                <div className="form-line">
-                    <label className="form-label"> e-mail :</label> 
-                    <input className="form-input" type="text" name="email" value={this.state.email} onChange={this.handleChange} />
-                </div>  
-                <div className="form-line">
-                    <label className="form-label">Tool Type :</label> 
-                    <select className="form-input" type="text" name="tool" value={this.state.tool} onChange={this.handleChange}>
-                      <option value="3D Printer">3D Printer</option>
-                      <option value="Electronics">Electronics</option>
-                      <option value="Drills">Drills</option>
-                      <option value="Study">Study</option>
-                      <option value="Art">Art</option>
-                      <option value="Other">Other</option>
-                    </select>
-                </div>  
-                <div className="form-line">
-                    <label className="form-label">Hour :</label> 
-                    <select className="form-input" type="text" name="hour" value={this.state.hour} onChange={this.handleChange}>
-                      <option value="15">0-30 min</option>
-                      <option value="45">30-60 min</option>
-                      <option value="60">More than 60</option>
-                    </select>
-                </div>                 
-                <input className="form-submit"type="submit" value="Submit" />
-                </form>
+                
             </div>
         )
       }

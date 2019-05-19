@@ -5,7 +5,7 @@ class Status extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        data: []        
+        data: this.props.data        
     };
     this.fetchStatus = this.fetchStatus.bind(this)
   }
@@ -30,11 +30,11 @@ class Status extends Component {
 
   render() {
     const { message } = this.props;
-    const status = this.state.data.status; 
+    const status = this.state.data; 
     return ( 
         <div className="Button home-status">        
         <div style={{flex:3}}>
-        <h1>{status}</h1>
+        <h1 className="Status-data" >{status}</h1>
         </div>
         <div style={{flex:3,marginLeft:10}}>
           <h1>{message}</h1>

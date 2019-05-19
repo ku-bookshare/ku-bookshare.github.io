@@ -5,7 +5,7 @@ import {
 import map from '../assets/map.jpg';
 const About = () => {
     return(
-        <div style={{width: 500}}>
+        <div className="form-body">
                 <Link to="/" className="Link close">
                     <a href="./" class="close"/>
                 </Link>
@@ -13,7 +13,7 @@ const About = () => {
                     Shelf Locations !
                 </h1>
                 <div className="form" >
-                    <img style={{width: 400,height: 300, marginTop: -10}} src={map} className="map" alt=""/>
+                    <img style={{marginTop: -10}} src={map} className="map" alt=""/>
                 </div>
         </div>
     )

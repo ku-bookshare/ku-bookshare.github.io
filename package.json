@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tunnel-x.github.io/",
+  "homepage": "https://ku-bookshare.github.io/",
   "dependencies": {
     "dotenv": "^8.0.0",
     "gh-pages": "^2.0.1",
@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -b master"
   },
   "eslintConfig": {
     "extends": "react-app"

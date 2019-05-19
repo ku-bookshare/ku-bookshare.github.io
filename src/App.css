@@ -30,22 +30,39 @@ body {
 }
 
 .App-header {
+  justify-content: left;
   position: fixed;
   background-image: linear-gradient(-228deg, #FFC047 0%, #FF5722 100%);
   left: 50%;
   width: 50%;
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   /*justify-content: center;*/
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: #fff;
+  height: 100%;
+}
+.right-body {
+  overflow-y: auto;
+  display: block;
+}
+.Menu {
+  top: 0px;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(127deg, #DF2307 0%, #BB0F03 100%);
+  display: flex;
+  justify-content: space-around;
+  
 }
 
 .map {
   margin-top:100px;
-  height: 400px;
+  width: 100%; 
+  max-width: 300px; 
+  height: auto; 
   pointer-events: none;
 }
 
@@ -68,6 +85,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  overflow: scroll;
 }
 
 .home-row-medium {
@@ -83,6 +101,9 @@ body {
 .home-row {
   justify-items: center;
 }
+.home-body {
+  min-height: 600px;
+ }
 .home-status {
   height: 240px !important;
   width: 40%;
@@ -136,15 +157,9 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
   border-radius: 20px;
 }
-
-.Menu {
-  top: 0px;
-  width: 100%;
-  height: 100px;
-  background: #BB0F03;
-
-  display: flex;
-  justify-content: space-around;
+.Status-data {
+  color: #FF5722;
+  font-size: 30px;
   
 }
 
@@ -229,6 +244,7 @@ body {
     width: 100%;}
   .home-status {
     flex: 1;
+    height: 140px !important;
     margin-left:5% !important;
   }
   .Button {
@@ -260,6 +276,11 @@ body {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .form-body {
+    width: 300px !important;
+  }
+}
 @media only screen and (min-width: 1001px) {
   /* For desktop: */
   .hover-left {
@@ -318,13 +339,14 @@ body.page-is-changing::after, body.page-is-changing::before {
 .close:after {
   transform: rotate(-45deg);
 }
-
+.form-body {
+  width: 500px;
+}
 .form{
-  margin-left: 5%;
-  width: 90%;
+  margin-left: 5% !important;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
   border-radius: 20px;
-  height: 400px;
+  width: 90%;
   background: #FFFFFF;
   color: #000000;
   font-family: 'roboto', Arial, sans-serif;
@@ -341,15 +363,18 @@ body.page-is-changing::after, body.page-is-changing::before {
 }
 
 .form-line {
+  width: 92%;
   margin-top: 30px;
+  margin-left: 3%;
   display: flex;
   flex-direction: row;
+  justify-content: left;
 }
 .form-label {
-  width: 100px;
+  width: 40%;
 }
 .form-input {
-  width: 200px;
+  width: 60%;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid;

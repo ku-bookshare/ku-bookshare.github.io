@@ -107,7 +107,7 @@ class Borrow extends Component {
                     <a href="./" class="close"/>
                 </Link>
                 <h1>
-                    Borrow a Book !
+                    Donate a Book !
                 </h1>
                 <form className="form" onSubmit={this.handleSubmit}>
                 <div className="form-line">
